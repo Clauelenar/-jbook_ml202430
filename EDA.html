@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>EDA &#8212; Proyecto final</title>
+    <title>EDA (Análisis exploratorio de datos) &#8212; Proyecto final</title>
   
   
   
@@ -174,8 +174,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">EDA</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">EDA (Análisis exploratorio de datos)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BENCHMARK.html">MODELOS DE BENCHMARK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MOG.html">Modelo Original</a></li>
 </ul>
@@ -316,7 +315,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>EDA</h1>
+    <h1>EDA (Análisis exploratorio de datos)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -326,15 +325,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">EDA</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-los-datos">Preparación de los datos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-estadistico">Resumen estadístico</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacion-preliminar-de-los-datos">Visualización preliminar de los datos</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-para-la-prediccion-del-precio-de-cierre-del-gas-natural">XGBoost para la predicción del precio de cierre del Gas Natural</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -345,9 +339,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eda">
-<h1>EDA<a class="headerlink" href="#eda" title="Link to this heading">#</a></h1>
-<p>##(Análisis exploratorio de datos)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="eda-analisis-exploratorio-de-datos">
+<h1>EDA (Análisis exploratorio de datos)<a class="headerlink" href="#eda-analisis-exploratorio-de-datos" title="Link to this heading">#</a></h1>
 <p>Con el fin de realizar un estudio de series de tiempo del comportamiento del mercado de futuros de combustibles, se requiere llevar a cabo el análisis exploratorio de datos (EDA). Antes de profundizar mediante el uso de modelos o métodos más sofisticados, primero es vital examinar y comprender la estructura, patrones y características de los datos. Este proceso incluye calcular estadísticas descriptivas, visualizar los datos y buscar tendencias o anomalías potenciales. Es esencial elegir el modelo adecuado, hacer predicciones precisas e identificar valores extremos o atípicos que puedan afectar el análisis y afectar la validez de los resultados.</p>
 <p>En este sentido, comenzaremos importando la base de datos completa y observaremos la información que tenemos disponible.</p>
 <section id="preparacion-de-los-datos">
@@ -735,7 +728,7 @@ memory usage: 1.9+ MB
 <li><p>Visualización de los datos - Conclusiones</p></li>
 </ol>
 <ul class="simple">
-<li><p><strong>Variabilidad:</strong> El precio de cierre del gas natural ha variado significativamente a lo largo de los años, posiblemente por las fluctuaciones de las principales variables macroeconómicas como lo son la TRM (Tasa Representativa del Mercado), el IPC (Índice de Precios al Consumidor)y el IPP  (Índice de Precios al Productor).</p></li>
+<li><p><strong>Variabilidad:</strong> El precio de cierre del gas natural ha variado significativamente a lo largo de los anos, posiblemente por las fluctuaciones de las principales variables macroeconómicas como lo son la TRM (Tasa Representativa del Mercado), el IPC (Índice de Precios al Consumidor)y el IPP  (Índice de Precios al Productor).</p></li>
 <li><p><strong>Rango de Precios:</strong> El gas natural muestra una dinámica de mercado muy diversa y voluble, encontrando un precio mínimo de 1,482 Usd, pero que pudo convertirse en 15,378 Usd con el tiempo.</p></li>
 <li><p><strong>Aumento en el volumen de las operaciones a lo largo del tiempo</strong></p></li>
 </ul>
@@ -884,200 +877,6 @@ memory usage: 1.9+ MB
 <p>La escala logarítmica nos permite observa como los datos varían en múltiples órdenes de magnitud. Esto permite que los cambios porcentuales sean más fáciles de interpretar, especialmente en estos casos que se presentan precios extremadamente altos o bajos.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="xgboost-para-la-prediccion-del-precio-de-cierre-del-gas-natural">
-<h1>XGBoost para la predicción del precio de cierre del Gas Natural<a class="headerlink" href="#xgboost-para-la-prediccion-del-precio-de-cierre-del-gas-natural" title="Link to this heading">#</a></h1>
-<p>Las series de tiempo relacionadas con el precio de Gas Natural, tienden a tener valores ligeramente más altos, lo que indica una tendencia al alza, además, de parecer estacionarios. Es decir, las propiedades estadísticas permanecen constantes en el tiempo.</p>
-<p>Sin embargo, es vital probar estas suposiciones utilizando métodos estadísticos en lugar de confiar únicamente en observaciones visuales. La aplicación de métodos estadísticos permite una evaluación más precisa de la presencia y la naturaleza de las tendencias y la estacionariedad en las series temporales del combustible. Este enfoque garantiza la precisión y confiabilidad de los resultados obtenidos y facilita la toma de decisiones precisas e informadas basadas en  análisis de  series temporales.</p>
-<p><strong>XGBoost</strong> es una abreviación de <em>Extreme Gradient Boosting</em> y es un algoritmo de aprendizaje automático que se utiliza ampliamente  en una variedad de aplicaciones, incluido el análisis de series temporales.</p>
-<p>En este apartado, nos enfocaremos en cómo aplicar XGBoost específicamente al modelado y pronóstico del precio de cierre del gas natural.</p>
-<p>XGBoost es una implementación optimizada de árboles de decisión mejorados, una técnica que combina múltiples modelos  débiles para crear un modelo predictivo robusto y preciso.</p>
-<p>Mediante un algoritmo de optimización de gradiente descendente minimiza la función de pérdida, mejorando así iterativamente la precisión del modelo.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">TimeSeriesSplit</span>
-<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
-
-<span class="c1"># Cargar datos del gas natural</span>
-<span class="n">gas_natural</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:/Users/Johal/Documents/Uninorte/SeriesdeTiempo/MachineLearning/DataTarea1/individual_data/Natural_Gas_data.csv&#39;</span><span class="p">)</span>
-
-<span class="c1"># Verificar las primeras filas y los tipos de datos</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">gas_natural</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">gas_natural</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
-
-<span class="c1"># Asegúrate de que las columnas existan</span>
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">]</span>
-<span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;close&#39;</span>
-
-<span class="c1"># Tratar datos faltantes</span>
-<span class="n">gas_natural</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="n">features</span> <span class="o">+</span> <span class="p">[</span><span class="n">target</span><span class="p">])</span>
-
-<span class="c1"># Prepara los datos</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
-
-<span class="c1"># Inicializar TimeSeriesSplit</span>
-<span class="n">tss</span> <span class="o">=</span> <span class="n">TimeSeriesSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Inicializar el modelo</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-
-<span class="c1"># Para almacenar las predicciones y valores reales</span>
-<span class="n">all_predictions</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">all_y_test</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Entrenamiento y validación</span>
-<span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">tss</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
-    <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
-
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)],</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-    <span class="c1"># Predicciones</span>
-    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-    <span class="n">all_predictions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
-    <span class="n">all_y_test</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
-    
-<span class="c1"># Mostrar resultados</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicciones:&quot;</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valores reales:&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-
-<span class="c1"># Graficar las predicciones y los valores reales</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-
-<span class="c1"># Añadir la traza de los valores reales</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">all_y_test</span><span class="p">))),</span>  <span class="c1"># Convertir a lista</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">all_y_test</span><span class="p">,</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Valores Reales&#39;</span><span class="p">,</span>
-    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
-<span class="p">))</span>
-
-<span class="c1"># Añadir la traza de las predicciones</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">all_predictions</span><span class="p">))),</span>  <span class="c1"># Convertir a lista</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">all_predictions</span><span class="p">,</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Predicciones&#39;</span><span class="p">,</span>
-    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="p">))</span>
-
-<span class="c1"># Actualizar layout</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Predicciones vs Valores Reales para el Gas Natural&#39;</span><span class="p">,</span>
-    <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Índice&#39;</span><span class="p">,</span>
-    <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Precio de Cierre&#39;</span><span class="p">,</span>
-    <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_white&#39;</span>
-<span class="p">)</span>
-
-<span class="c1"># Mostrar la figura</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         date  open   high   low  close  volume
-0  2000-08-30  4.65  4.815  4.63  4.805   34954
-1  2000-08-31  4.82  4.870  4.74  4.780   25787
-2  2000-09-01  4.75  4.860  4.75  4.835     113
-3  2000-09-05  4.85  4.975  4.84  4.960   26096
-4  2000-09-06  4.99  5.110  4.96  5.065   32764
-date       object
-open      float64
-high      float64
-low       float64
-close     float64
-volume      int64
-dtype: object
-Predicciones: [2.3138611 2.2811527 2.3850915 2.3866694 2.4894931 2.5605938 2.718112
- 2.7272935 2.6913488 2.7148757 2.593422  2.553035  2.5316465 2.640965
- 2.6015205 2.7279353 2.6592438 2.6917953 2.825009  2.874504  2.9591138
- 3.0744095 3.0999033 2.974045  2.942549  2.8437552 2.8482065 2.814283
- 2.741249  2.7113469]
-Valores reales: [2.25200009 2.38100004 2.3440001  2.41599989 2.49499989 2.62599993
- 2.75099993 2.671      2.84200001 2.65700006 2.51999998 2.58999991
- 2.49300003 2.57200003 2.58699989 2.75600004 2.58599997 2.75699997
- 2.8210001  2.91799998 2.9059999  3.12899995 3.04500008 2.95900011
- 2.88100004 2.78800011 2.90899992 2.74099994 2.70499992 2.81100011]
-</pre></div>
-</div>
-</div>
-</div>
-<p>El gráfico anterior ilustra la eficacia  del modelo predictivo a corto plazo y demuestra su capacidad para capturar con precisión  patrones y tendencias presentes en los datos.</p>
-<p>El modelo demostró un  poder predictivo significativo al ajustar con precisión puntos de datos reales y seguir de cerca las fluctuaciones observadas a lo largo del tiempo.</p>
-<p>Una evaluación detallada del modelo muestra que es capaz de predecir con precisión  fluctuaciones a corto plazo en los datos y que se adapta bien a las condiciones cambiantes del mercado. Este poder predictivo se refleja en la capacidad del modelo para predecir con precisión  tendencias ascendentes y descendentes en series temporales y detectar cambios repentinos en el comportamiento de los datos.
-Además, existe una notable coherencia  entre las predicciones del modelo y los valores reales, lo que respalda su capacidad para proporcionar estimaciones precisas incluso durante períodos de alta volatilidad. Esta precisión y adaptabilidad del modelo a corto plazo es importante para una toma de decisiones informada.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
-<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
-
-<span class="c1"># Cargar datos del gas natural</span>
-<span class="n">gas_natural</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:/Users/Johal/Documents/Uninorte/SeriesdeTiempo/MachineLearning/DataTarea1/individual_data/Natural_Gas_data.csv&#39;</span><span class="p">)</span>
-
-<span class="c1"># Convertir la columna &#39;date&#39; a formato de fecha</span>
-<span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
-
-<span class="c1"># Calcular las tendencias</span>
-<span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;volume_trend&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;low_trend&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;close_trend&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="c1"># Eliminar filas con NaN resultantes de las tendencias</span>
-<span class="n">gas_natural</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Definir características y variable objetivo</span>
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;volume_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;low_trend&#39;</span><span class="p">]</span>
-<span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;close_trend&#39;</span>
-
-<span class="c1"># Dividir los datos en entrenamiento y prueba</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">365</span><span class="p">],</span> <span class="n">gas_natural</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">365</span><span class="p">:]</span>
-<span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">gas_natural</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">365</span><span class="p">],</span> <span class="n">gas_natural</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">365</span><span class="p">:]</span>
-
-<span class="c1"># Inicializar el modelo</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-
-<span class="c1"># Entrenamiento del modelo</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Predicciones</span>
-<span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="c1"># Graficar las predicciones y los valores reales</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span>
-    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">365</span><span class="p">:]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">preds</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Predicciones&#39;</span><span class="p">),</span>
-    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">gas_natural</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">365</span><span class="p">:]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Datos de Validación&#39;</span><span class="p">),</span>
-<span class="p">])</span>
-
-<span class="c1"># Actualizar layout para mostrar las fechas correctamente</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Predicciones vs Valores Reales para el Gas Natural&#39;</span><span class="p">,</span>
-    <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Fecha&#39;</span><span class="p">,</span>
-    <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Precio de Cierre (Tendencia)&#39;</span><span class="p">,</span>
-    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">tickformat</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span>  <span class="c1"># Ajustar el formato de la fecha</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
-    <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-    <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="p">)</span>
-
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-</div>
-</div>
-<p>El gráfico anterior muestra que los modelos de pronóstico a largo plazo pueden capturar efectivamente la tendencia general de una serie temporal.</p>
-<p>El modelo muestra un buen rendimiento  al predecir con precisión la dirección y el comportamiento de los datos a lo largo del tiempo, demostrando una sólida comprensión de las propiedades de las series temporales y adaptándose adecuadamente.
-Una evaluación detallada muestra que el modelo es capaz de rastrear con precisión el historial de series temporales durante múltiples períodos de tiempo, lo que demuestra su capacidad para identificar y predecir con precisión las tendencias subyacentes.
-Este nivel de personalización y precisión es esencial para proporcionar estimaciones confiables y útiles del comportamiento futuro de las series temporales y facilitar la toma de decisiones estratégicas informadas  en una variedad de contextos comerciales.
-Además, se observa una  notable concordancia entre las predicciones del modelo y la evolución real de la serie temporal, lo que confirma la capacidad del modelo para predecir con éxito  cambios de tendencias y fluctuaciones  a lo largo del tiempo.
-Esta capacidad predictiva sólida y consistente respalda la confiabilidad y efectividad del modelo para identificar patrones y tendencias a largo plazo, lo que lo convierte en una herramienta valiosa para la planificación estratégica y la toma de decisiones.</p>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1143,15 +942,10 @@ Esta capacidad predictiva sólida y consistente respalda la confiabilidad y efec
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">EDA</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-los-datos">Preparación de los datos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-estadistico">Resumen estadístico</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacion-preliminar-de-los-datos">Visualización preliminar de los datos</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-para-la-prediccion-del-precio-de-cierre-del-gas-natural">XGBoost para la predicción del precio de cierre del Gas Natural</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
